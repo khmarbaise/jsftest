@@ -143,8 +143,8 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>${maven.compiler.plugin.version}</version>
           <configuration>
-            <source>1.5</source>
-            <target>1.5</target>
+            <source>1.6</source>
+            <target>1.6</target>
             <debug>true</debug> <!-- Sollten wir noch mit dem Release Zyklus kombinieren! => Profile? -->
           </configuration>
         </plugin>

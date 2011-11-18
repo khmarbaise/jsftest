@@ -17,13 +17,23 @@ public class VersionValidator implements Validator {
         if (value == null) {
             return;
         }
-        String input = (String) value;
-        try {
-            @SuppressWarnings("unused")
-            Version v = new Version(input);
-        } catch (IllegalArgumentException e) {
-            throw new ValidatorException(new FacesMessage(e.getMessage()));
+        
+        if (!(value instanceof Version)) {
+            return;
         }
+
+//        String input = (String) value;
+//        try {
+//            @SuppressWarnings("unused")
+//            Version v = new Version(input);
+//        } catch (IllegalArgumentException e) {
+//            FacesMessage message = new FacesMessage();
+//            message.setSeverity(FacesMessage.SEVERITY_ERROR);
+//            message.setSummary("The given version is not Ok.");
+//            message.setDetail(e.getMessage());
+//            context.addMessage("userForm:version", message);
+//            throw new ValidatorException(message);
+//        }
     }
 
 }

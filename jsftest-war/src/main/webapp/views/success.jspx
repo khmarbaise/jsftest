@@ -28,13 +28,13 @@
 
 				<h:form>
 
-					<ice:inputText value="#{versionManager.version}" 
-						required="true">
+					<ice:inputText id="versionInput" value="#{versionManager.version}" required="true">
 						<f:validator validatorId="versionValidator"/>
 						<f:converter converterId="versionConverter"/>
 					</ice:inputText>
 					
 					<h:commandButton value="DO IT" action="#{versionManager.action}"/>
+					<h:message for="versionInput" style="color:red" />
 				</h:form>
 				
 	        </f:view>
