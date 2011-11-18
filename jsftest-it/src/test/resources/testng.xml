@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AllTestsSuiteName">
+
+  <test name="AllTestsTestName">
+    <packages>
+      <package name="com.rfz.de.test.*" />
+    </packages>
+  </test>
+
+</suite>
+
+  

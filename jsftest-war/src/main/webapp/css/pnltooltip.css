@@ -1,0 +1,44 @@
+/*
+----------- PanelTooltip ----------
+*/
+
+.icePnlTlTip {
+	width: 105px;
+    overflow: hidden;
+	background-color: #DDDDDD;
+    color: #666666;
+    border-right: 2px solid #ABABAB;
+    border-top: 1px solid #ABABAB;
+    border-left: 1px solid #ABABAB;
+    border-bottom: 2px solid #ABABAB;
+    padding: 0px;
+    z-index: 1000;
+}
+
+.icePnlTlTipHdr {
+	width: 100%;
+	background-color: lightsteelblue;
+    height: 1.0em;
+}
+
+.icePnlTlTipHdr .iceOutTxt {
+	color: black;
+	font-size: 0.8em;
+	padding: 4px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.icePnlTlTipBody {
+    padding: 6px;
+}
+
+.icePnlTlTipBody .iceOutTxt {
+	font-size: 0.9em;
+}
+
+.icePnlTlTipFtr {
+    float: right;
+    height: auto;
+    background-color: #DDDDDD;
+}

@@ -1,0 +1,98 @@
+/* Die Einträge in den Submenüs werden nicht umgebrochen */
+.iceMnuBarVrt {
+	height: auto;
+	width: 100%;
+    float: left;
+    white-space: nowrap;
+}
+
+/* Darstellung der Menuitems ohne Link wie Buttons */
+.iceMnuBarVrt .iceCmdLnk {
+	text-decoration: none;
+	color: black;
+	
+	/* font-size: 1.1em; */
+	/* font: 1.1em/1.1em Arial, Helvetica, sans-serif; */
+    
+    float: none;
+    display: block;
+    padding: 5px; /* Innenabstand innerhalb des eines einzelnen Menuitems */
+    margin-bottom: 1px; /* Aussenrand unten, um Trennlinie zwischen Menuitems zu haben */
+}
+
+/* Wie oben nur für deaktivierte Menuitems */
+.iceMnuBarVrt .iceCmdLnk-dis {
+	text-decoration: none;
+	color: #999999;
+	
+	/* font-size: 1.1em; */
+	/* font: 1.2em/1.5em; */
+	
+    float: none;
+    display: block;
+    padding: 5px;
+    margin-bottom: 1px;
+}
+
+/* Hover-Effekt: Hinterlegung dunkelblau  */
+.iceMnuBarVrt a:hover {
+    background-color: silver;
+}
+
+.iceMnuBarVrt .selectedVrtItem {
+	background-color: silver;
+}
+
+.iceMnuBarVrt .selectedVrtItem .iceOutTxt {
+	font-weight: bold;
+}
+
+/* Einheitliches Schriftbild für alle Menuitems (daher Komma-separiert) */
+.iceMnuBarItemLabel, .iceMnuItmLabel, .iceMnuItmLabel-dis {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    
+    /* font-size: 1.0em; */
+    font: 1.1em/1.2em Arial, Helvetica, sans-serif;
+    
+    display: inline;
+}
+
+
+/* Submenü-Einstellungen */
+/*************************/
+
+/* Submenüs werden neben das Hauptmenü als Kästchen dargestellt */
+.iceMnuBarVrtSubMenu {
+    padding: 1px;
+    width: 220px;
+    background-color: #EFEFEF;
+    border: 1px solid #999999;
+    position: absolute;
+    height: auto;
+    display: block;
+}
+
+/* Das Submenü-Zeichen (Dreieck) wird hiner das Menu-Label positioniert */
+.iceMnuBarVrtSubMenuInd {
+    display: inline;
+    float: right;
+    padding-right: 1px;    
+}
+
+/* Submenu ohne Link darstellen */
+.iceMnuItm a {
+	text-decoration: none;
+    color: #333333;
+    display: block;
+    /* padding: 3px; */
+}
+
+/* Hover-Effekt für Submenü-Einträge: blau hinterlegen */
+.iceMnuItm a:hover {
+    background-color: silver;
+}
+
+/* Hover-Effekt für Submenü-Einträge: Schrift weiß */
+.iceMnuItm a:hover .iceOutTxt { 
+    /*font-weight: bold;*/
+}

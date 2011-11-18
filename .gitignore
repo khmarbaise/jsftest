@@ -1,0 +1,9 @@
+output
+target
+bin
+build
+.settings
+.classpath
+.project
+.mymetadata
+*.bak

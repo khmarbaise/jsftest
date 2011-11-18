@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<f:view xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ice:outputDeclaration doctypeRoot="HTML"
+		doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN"
+		doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" />
+
+	<html>
+	    <head>
+			<title>Version JSPX</title>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+			<ice:outputStyle href="../css/common.css" />
+			<ice:outputStyle href="../css/fieldsets.css" />
+			<ice:outputStyle href="../css/tabs.css" />
+			<ice:outputStyle href="../css/menubar.css" />
+			<ice:outputStyle href="../css/pnlpopup.css" />
+			<ice:outputStyle href="../css/connstatus.css" />
+		</head>
+		<body>
+			<f:view>
+				<h:outputText value="#{versionManager.version}">
+					<f:converter converterId="versionConverter"/>
+				</h:outputText>
+	        </f:view>
+
+		</body>
+		
+	</html>
+</f:view>

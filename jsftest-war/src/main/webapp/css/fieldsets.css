@@ -1,0 +1,48 @@
+fieldset {
+    border: 0px none;
+}
+.inzweispalten {
+	width: 50%;
+	vertical-align: top;
+	border: 1px solid gray;
+}
+.inzweizeilen {
+	height: 50%;
+	vertical-align: top;
+}
+.indreispalten {
+	width: 33%;
+	vertical-align: top;
+}
+
+.ueberschrift {
+	background-color: #C0C0C0;
+	font-weight: bold;
+	vertical-align: top;
+	text-align: left;
+}
+
+table.editkm {
+	width: 100%;
+	font-size: 10pt;
+}
+
+.rowedit{
+	height: 25px;
+}
+
+
+
+table.KeyValueList tr td {
+	border-style: none;
+}
+table.KeyValueList .key {
+	width: 270px;
+	vertical-align: top;
+}
+table.KeyValueList .value {
+	width: 400px;
+}
+table.KeyValueList .shortvalue {
+	width: 200px;
+}

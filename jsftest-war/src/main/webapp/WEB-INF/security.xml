@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:security="http://www.springframework.org/schema/security"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+          http://www.springframework.org/schema/security
+          http://www.springframework.org/schema/security/spring-security-3.0.3.xsd">
+	
+	<bean id="springSecurityFilterChain" class="org.springframework.security.web.FilterChainProxy">
+	  <security:filter-chain-map path-type="ant">
+	  	 <security:filter-chain pattern="/error" filters="none" />
+	     <security:filter-chain pattern="/**" filters="
+	     	   httpSessionIntegrationFilter,
+	           securityContextPersistenceFilter,
+	           exceptionTranslationFilter,
+	           secureIdFilter" />
+	  </security:filter-chain-map>
+	</bean>
+	
+	
+	<!-- 1. Filter -->
+	<bean id="httpSessionIntegrationFilter"
+		class="org.springframework.security.web.context.HttpSessionContextIntegrationFilter" />
+	
+	
+	<!-- 2. Filter -->
+	<bean id="securityContextPersistenceFilter"
+		class="org.springframework.security.web.context.SecurityContextPersistenceFilter">
+		<property name='securityContextRepository'>
+			<bean class='org.springframework.security.web.context.HttpSessionSecurityContextRepository'>
+  				<property name='allowSessionCreation' value='false' />
+			</bean>
+		</property>
+	</bean>
+
+
+	<!-- 3. Filter -->
+	<bean id="exceptionTranslationFilter"
+			class="de.konsens.wwwkmv.security.KmvExceptionTranslationFilter">
+		<property name="authenticationEntryPoint" ref="authenticationEntryPoint" />
+		<!--property name="accessDeniedHandler" ref="accessDeniedHandler" /-->
+	</bean>
+	
+	<bean id="authenticationEntryPoint"
+		class="org.springframework.security.web.authentication.Http403ForbiddenEntryPoint" />
+		
+	<!--bean id="accessDeniedHandler"
+			class="org.springframework.security.web.access.AccessDeniedHandlerImpl">
+		<property name="errorPage" value="/error.htm" />
+	</bean-->	
+
+	
+	<!-- 4. Filter -->
+	<bean id="secureIdFilter" class="de.konsens.wwwkmv.security.KmvAuthenticationFilter">
+		<property name="principalRequestHeader" value="SecureEBK"/>
+		<property name="authenticationManager" ref="authenticationManager" />
+	</bean>
+	
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider ref="preauthAuthProvider" />
+	</security:authentication-manager>
+
+	<bean id="preauthAuthProvider"
+			class="org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationProvider">
+		<property name="preAuthenticatedUserDetailsService">
+			<bean id="userDetailsServiceWrapper"
+					class="org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper">
+				<property name="userDetailsService" ref="userDetailsService" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="userDetailsService" class="de.konsens.wwwkmv.security.KmvUserDetailsService">
+		<property name="principalRequestHeader" value="SecureEBK"/>
+	</bean>
+	
+</beans>

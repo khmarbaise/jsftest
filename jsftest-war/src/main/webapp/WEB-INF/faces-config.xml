@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE faces-config PUBLIC
+    "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN"
+    "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+
+<faces-config>
+	
+	<application>
+		<view-handler>com.icesoft.faces.facelets.D2DFaceletViewHandler</view-handler>
+	</application>
+	<converter>
+		<description>versionConvert</description>
+		<display-name>versionConverter</display-name>
+		<converter-id>versionConverter</converter-id>
+		<converter-class>de.konses.jsftest.converter.VersionConverter</converter-class>
+	</converter>
+	<validator>
+		<description>versionValidator</description>
+		<display-name>versionValidator</display-name>
+		<validator-id>versionValidator</validator-id>
+		<validator-class>de.konses.jsftest.validator.VersionValidator</validator-class>
+	</validator>
+	<managed-bean>
+		<managed-bean-name>loginManager</managed-bean-name>
+		<managed-bean-class>de.konses.jsftest.LoginManager</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>versionManager</managed-bean-name>
+		<managed-bean-class>de.konses.jsftest.VersionManager</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
+	<navigation-rule>
+		<display-name>views/login</display-name>
+		<from-view-id>/views/login.jspx</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/views/success.jspx</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>views/login</display-name>
+		<from-view-id>/views/login.jspx</from-view-id>
+		<navigation-case>
+			<from-outcome>error</from-outcome>
+			<to-view-id>/views/error.jspx</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>views/success</display-name>
+		<from-view-id>/views/success.jspx</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/views/version.jspx</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<display-name>views/success</display-name>
+		<from-view-id>/views/success.jspx</from-view-id>
+		<navigation-case>
+			<from-outcome>error</from-outcome>
+			<to-view-id>/views/success.jspx</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<application>
+<!-- 		<locale-config> -->
+<!-- 			<default-locale>de</default-locale> -->
+<!--             <supported-locale>de</supported-locale> -->
+<!-- 		</locale-config> -->
+		<message-bundle>com.sun.faces.resources.Messages</message-bundle>
+	</application>
+	
+</faces-config>

@@ -1,0 +1,187 @@
+/* Allgemeine Grundeinstellungen der HTML-Primitiven. */
+body {
+	background-color: #e0e0e0;
+	height: 100%;
+	padding: 0;
+	margin: 40px 40px 0px 50px;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 12px;
+}   
+td {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 12px;
+}
+p {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 12px;
+}
+table.Bordered {
+	border-style: ridge;
+	border-width: 3px;
+	font-size: 12px;
+	width: 100%;
+}
+
+table.zuweisung {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table.zuweisung tr td {
+	height: 28px;
+}
+
+.CaptionBig {
+	font-weight: bold;
+	font-size: 19px;
+}
+
+.CaptionSmall {
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #0000ff;
+}
+a:visited {
+	text-decoration: none;
+	color: #0000ff;
+}
+a:active {
+	text-decoration: none;
+	color: #0000ff;
+}
+a:hover {
+	text-decoration: none;
+	color: #0000ff;
+}
+
+/* Kopfzeile oberhalb der eigentlichen Anwendung mit den Links: Hilfe,
+   Versionsnachweis und ggf. Benutzereinstellungen. */
+.headerSubView {
+	text-align: right;
+	width: 100%;
+	border-bottom: 1px solid black;
+	background-color: #E0E0E0;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 900px;
+}
+.headerSubView .icePnlGrd {
+	margin-left: auto; /* Ausrichtung der Links innerhalb des panelGrids rechts */
+}
+.headerSubView .iceOutTxt {
+	font-size: 8pt;
+	font-weight: bold;
+}
+.headerSubView .iceCmdLnk {
+	text-decoration: none;
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+/* Doppelte Linie zur Unterschreichung von Überschrifttexten in Inhalts-
+   seiten. */
+.linie {
+	border-bottom-color: black;
+	border-bottom-width: 3px;
+	border-bottom-style: double;
+}
+
+/* Aussehen der normalen und disabled Radiobutton bei Layout "pageDirection" */
+.kmvSelOneRb {
+	padding: 8px;
+	border-spacing: 20px;
+}
+.kmvSelOneRb-dis {
+	padding: 8px;
+	border-spacing: 20px;
+	color: gray;
+}
+
+/* Fehlertexte zu Eingabefeldern. */
+.inputErrorText {
+	color: red;
+	font-weight: bold;
+}
+
+/* Tabelle mit drei bzw. vier Spalten für die "Bearbeiten"-Maske. Feste Breite
+   für Spalte 0 und Spalte 1, die Restbreite wird auf Spalte 2 und Spalte 3
+   aufgeteilt. Die Overflow-Angabe regelt die Anzeige bei Ausgabetexten, die
+   nicht in ihre Zellen mit festen Breiten passen. Die Klassen für die Zeilen
+   werden jeweils abwechseln für alle Zeilen der Tabelle angewendet. */
+table.pnlGrdEdit {
+	width: 570px;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+/* Alternierende Zeilenfarben. Diese sind können auch für andere Tabellen
+   als pnlGrdEdit verwendet werden. Auch die Tabelle pnlGrdEdit braucht diese
+   Zeilen-Definitionen nicht zwangsweise verwenden, so kann die alternierende
+   Färbung ausgeschaltet werden. */
+.zeile1 {
+	background-color: lightgrey;
+}
+.zeile2 {
+	background-color: lightsteelblue;
+}
+
+/* Standardklassen für Eingabefelder: aktiv -> weißer Hintergrund,
+   inaktiv -> grauer Hintertrund */
+.iceInpTxt {
+	background-color: #ffffff;
+}
+.iceInpTxt-dis {
+	background-color: #dddddd;
+}
+.iceSelOneMnu {
+	background-color: #ffffff;
+}
+.iceSelOneMnu-dis {
+	background-color: #dddddd;
+}
+
+/* Es gibt vier Kategorien von Zellen (<td>-Element), dabei gilt
+   pnlGrdColEdit0: eine optionale erste Spalte für z.B. Radiobuttons ist
+   pnlGrdColEdit1 bis pnlGrdColEdit3: eigentliche Spalten für Tabelleninhalt */
+.pnlGrdColEdit0 {
+	height: 23px;
+	width: 25px;
+	background-color: #E0E0E0;
+}
+
+.pnlGrdColEdit1 {
+	height: 23px;
+	width: 140px;
+	overflow: hidden;
+	border: 1px solid darkgray;
+}
+.pnlGrdColEdit2 {
+	height: 23px;
+	border: 1px solid darkgray;
+}
+.pnlGrdColEdit3 {
+	height: 23px;
+	border: 1px solid darkgray;
+}
+
+/* Falls die Tabelle ohne Rahmengitter verwendet werden soll müssen diese
+   Spaltendefinitionen verwendet werden. */
+.pnlGrdColEditBottomBorder1 {
+	height: 23px;
+	width: 140px;
+	overflow: hidden;
+}
+.pnlGrdColEditBottomBorder2 {
+	height: 23px;
+}
+.pnlGrdColEditBottomBorder3 {
+	height: 23px;
+}

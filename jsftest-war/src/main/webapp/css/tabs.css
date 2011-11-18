@@ -1,0 +1,372 @@
+/*
+----------- ice:panelTabSet ----------
+*/
+
+.icePnlTbSet {
+	width: 100%;
+}
+
+.icePnlTbSetBtm {
+	padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-right: 2px solid #353535;
+    border-top: 2px solid #353535;
+    border-left: 2px solid #353535;
+    background-color: #E0E0E0;
+}
+
+/* Relevante TabSet Einstellung */
+.icePnlTbSetCnt {
+	padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-right: 2px solid #353535;
+    border-bottom: 2px solid #353535;
+    border-left: 2px solid #353535;
+    background-color: #E0E0E0;
+}
+
+.icePnlTbSetCntBtm {
+	padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-right: 2px solid #353535;
+    border-top: 2px solid #353535;
+    border-left: 2px solid #353535;
+    background-color: #E0E0E0;
+}
+
+.icePnlTbSetSpcr {
+	width: 100%;
+    border-bottom: 1px solid #353535;
+}
+
+.icePnlTbSetSpcrBtm {
+	width: 100%;
+    border-top: 1px solid #353535;
+}
+
+.icePnlTbSetHdrIconLft {
+    width: 14px;
+    height: 13px;
+}
+
+.icePnlTbSetHdrIconRt {
+	width: 14px;
+    height: 13px;
+}
+
+.icePnlTbSetHdrLbl {
+	padding-top: 2px;
+    padding-bottom: 2px;
+    white-space: nowrap;
+}
+
+
+
+
+
+.icePnlTbOff {
+
+}
+
+.icePnlTbOff .MidMid td {
+    white-space: nowrap;
+    text-align: center;    	
+}
+
+.icePnlTbOff .LftTop {
+    background-color: transparent;
+    background-image: url( "./css-images/off-left-top.gif" );
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+
+.icePnlTbOff .MidTop {
+    background-color: transparent;
+    background-image: url( "./css-images/off-mid-top.gif" );
+    background-repeat: repeat-x;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+
+.icePnlTbOff .RtTop {
+    background-color: transparent;
+    background-image: url( "./css-images/off-right-top.gif" );
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+
+.icePnlTbOff .LftMid {
+    background-color: transparent;
+    background-image: url( "./css-images/off-left-mid.gif" );
+    background-repeat: repeat-y;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+
+.icePnlTbOff .MidMid {
+    background-color: transparent;
+    background-image: url( "./css-images/off-mid-mid.gif" );
+    background-repeat: repeat;
+    text-align: center;
+    border: none;
+    white-space: nowrap;
+}
+
+.icePnlTbOff .MidMid a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+* html .icePnlTbOff .MidMid a {
+    width: 1%;
+}
+
+.icePnlTbOff .RtMid {
+    background-color: transparent;
+    background-image: url( "./css-images/off-right-mid.gif" );
+    background-repeat: repeat-y;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+
+.icePnlTbOff .LftBtm {
+    background-color: transparent;
+    background-image: url( "./css-images/off-left-bot.gif" );
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.icePnlTbOff .MidBtm {
+    background-color: transparent;
+    background-image: url( "./css-images/off-mid-bot.gif" );
+    background-repeat: repeat-x;
+    border: none;
+}
+
+.icePnlTbOff .RtBtm {
+    background-color: transparent;
+    background-image: url( "./css-images/off-right-bot.gif" );
+    background-repeat: no-repeat;
+    border: none;
+}
+
+
+
+
+.icePnlTbOver {
+
+}
+
+.icePnlTbOver .MidMid td{
+    white-space: nowrap;
+    text-align: center;    	
+}
+
+.icePnlTbOver .LftTop {
+    background-color: transparent;
+    background-image: url( "./css-images/over-left-top.gif" );
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+
+.icePnlTbOver .MidTop {
+    background-color: transparent;
+    background-image: url( "./css-images/over-mid-top.gif" );
+    background-repeat: repeat-x;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+
+.icePnlTbOver .RtTop {
+    background-color: transparent;
+    background-image: url( "./css-images/over-right-top.gif" );
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+
+.icePnlTbOver .LftMid {
+    background-color: transparent;
+    background-image: url( "./css-images/over-left-mid.gif" );
+    background-repeat: repeat-y;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+
+.icePnlTbOver .MidMid {
+    background-color: transparent;
+    background-image: url( "./css-images/over-mid-mid.gif" );
+    background-repeat: repeat;
+    text-align: center;
+    border: none;
+    white-space: nowrap;
+}
+
+.icePnlTbOver .MidMid a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+* html .icePnlTbOver .MidMid a {
+    width: 1%;
+}
+
+.icePnlTbOver .RtMid {
+    background-color: transparent;
+    background-image: url( "./css-images/over-right-mid.gif" );
+    background-repeat: repeat-y;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+
+.icePnlTbOver .LftBtm {
+    background-color: transparent;
+    background-image: url( "./css-images/over-left-bot.gif" );
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.icePnlTbOver .MidBtm {
+    background-color: transparent;
+    background-image: url( "./css-images/over-mid-bot.gif" );
+    background-repeat: repeat-x;
+    border: none;
+}
+
+.icePnlTbOver .RtBtm {
+    background-color: transparent;
+    background-image: url( "./css-images/over-right-bot.gif" );
+    background-repeat: no-repeat;
+    border: none;
+}
+
+
+
+
+
+.icePnlTbOn {
+
+}
+
+.icePnlTbOn .MidMid td{
+    white-space: nowrap;
+    text-align: center;    	
+}
+
+.icePnlTbOn .LftTop {
+    background-color: transparent;
+    background-image: url( "./css-images/on-left-top.gif" );
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+
+.icePnlTbOn .MidTop {
+    background-color: transparent;
+    background-image: url( "./css-images/on-mid-top.gif" );
+    background-repeat: repeat-x;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+
+.icePnlTbOn .RtTop {
+    background-color: transparent;
+    background-image: url( "./css-images/on-right-top.gif" );
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+
+.icePnlTbOn .LftMid {
+    background-color: transparent;
+    background-image: url( "./css-images/on-left-mid.gif" );
+    background-repeat: repeat-y;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+
+.icePnlTbOn .MidMid {
+    background-color: transparent;
+    background-image: url( "./css-images/on-mid-mid.gif" );
+    background-repeat: repeat;
+    text-align: center;
+    border: none;
+    white-space: nowrap;
+}
+
+.icePnlTbOn .MidMid a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+* html .icePnlTbOn .MidMid a {
+    width: 1%;
+}
+
+.icePnlTbOn .RtMid {
+    background-color: transparent;
+    background-image: url( "./css-images/on-right-mid.gif" );
+    background-repeat: repeat-y;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+
+.icePnlTbOn .LftBtm {
+    background-color: transparent;
+    background-image: url( "./css-images/on-left-bot.gif" );
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.icePnlTbOn .MidBtm {
+    background-color: transparent;
+    background-image: url( "./css-images/on-mid-bot.gif" );
+    background-repeat: repeat-x;
+    border: none;
+}
+
+.icePnlTbOn .RtBtm {
+    background-color: transparent;
+    background-image: url( "./css-images/on-right-bot.gif" );
+    background-repeat: no-repeat;
+    border: none;
+}

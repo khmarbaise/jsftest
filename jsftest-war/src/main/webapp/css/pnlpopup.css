@@ -1,0 +1,15 @@
+.icePnlPop {
+    padding: 0px;
+    z-index: 999;
+    position: absolute;
+}
+
+.icePnlPopHdr {
+	color: white;
+    text-align: center;
+}
+
+.icePnlPopBody {
+    background-color: #EEEEEE;
+    padding: 10px;
+}

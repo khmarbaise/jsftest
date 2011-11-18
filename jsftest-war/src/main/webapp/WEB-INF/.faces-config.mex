@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JSFFlowViewLayout version="1.0">
+  <Drawing gridVisible="true" snapOn="true" />
+  <JSFFlowResource path="/views/auswahlRolle.jspx" location="-100,320" dimension="165,36" />
+  <JSFFlowResource path="/views/suchergebnisse.jspx" location="140,240" dimension="177,36" />
+  <JSFFlowResource path="/views/sucheBE.jspx" location="140,460" dimension="143,36" />
+  <JSFFlowResource path="/views/filter/benutzereinstellungen.jspx" location="140,60" dimension="235,36" />
+  <JSFFlowResource path="/views/viewkm.jspx" location="480,320" dimension="138,36" />
+  <JSFFlowNavigationCase id="/views/auswahlRolle.jspx,/views/suchergebnisse.jspx,ZLZF,null" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-2,320" />
+      <AbsolutePoint location="-2,258" />
+      <AbsolutePoint location="140,258" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/views/auswahlRolle.jspx,/views/sucheBE.jspx,BE,null" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-17,356" />
+      <AbsolutePoint location="-17,478" />
+      <AbsolutePoint location="140,478" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/views/suchergebnisse.jspx,/views/filter/benutzereinstellungen.jspx,editProfile,null" routingType="1">
+    <Bendpoints>
+      <Point location="200,160" />
+    </Bendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/views/suchergebnisse.jspx,/views/viewkm.jspx,viewKM,null" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="317,273" />
+      <AbsolutePoint location="549,273" />
+      <AbsolutePoint location="549,320" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/views/suchergebnisse.jspx,/views/suchergebnisse.jspx,reload,null" routingType="1">
+    <Bendpoints>
+      <Point location="300,220" />
+      <Point location="360,220" />
+      <Point location="360,240" />
+    </Bendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/views/suchergebnisse.jspx,/views/auswahlRolle.jspx,auswahlRolle,null" routingType="1">
+    <Bendpoints>
+      <Point location="160,320" />
+    </Bendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/views/sucheBE.jspx,/views/viewkm.jspx,viewKM,null" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="283,478" />
+      <AbsolutePoint location="549,478" />
+      <AbsolutePoint location="549,356" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/views/sucheBE.jspx,/views/auswahlRolle.jspx,auswahlRolle,null" routingType="1">
+    <Bendpoints>
+      <Point location="60,420" />
+    </Bendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/views/sucheBE.jspx,/views/sucheBE.jspx,reload,null" routingType="1">
+    <Bendpoints>
+      <Point location="260,440" />
+      <Point location="320,440" />
+      <Point location="320,460" />
+    </Bendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/views/filter/benutzereinstellungen.jspx,/views/suchergebnisse.jspx,back,null" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="243,96" />
+      <AbsolutePoint location="243,240" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/views/filter/benutzereinstellungen.jspx,/views/auswahlRolle.jspx,auswahlRolle,null" routingType="1">
+    <Bendpoints>
+      <Point location="-40,80" />
+    </Bendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/views/viewkm.jspx,/views/suchergebnisse.jspx,back,null" routingType="1">
+    <Bendpoints>
+      <Point location="300,320" />
+    </Bendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/views/viewkm.jspx,/views/viewkm.jspx,error,null" routingType="1">
+    <Bendpoints>
+      <Point location="600,300" />
+      <Point location="660,300" />
+      <Point location="660,320" />
+    </Bendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/views/viewkm.jspx,/views/sucheBE.jspx,backToSucheBE,null" routingType="1">
+    <Bendpoints>
+      <Point location="240,340" />
+    </Bendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/views/viewkm.jspx,/views/auswahlRolle.jspx,auswahlRolle,null" routingType="1">
+    <Bendpoints>
+      <Point location="280,400" />
+    </Bendpoints>
+  </JSFFlowNavigationCase>
+</JSFFlowViewLayout>
+
