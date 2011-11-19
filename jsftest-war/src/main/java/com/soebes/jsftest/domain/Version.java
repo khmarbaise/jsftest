@@ -13,19 +13,19 @@ public class Version implements Comparable<Version> {
 
 
     /**
-     * Angabe f�r einen Unbekannte Version.
+     * Angabe für eine Unbekannte Version.
      */
     public static final Version VERSION_UNKNOWN = new Version(0, 0, 0, false);
 
     private static final String SNAPSHOT = "-SNAPSHOT";
 
-    private static final Pattern VERSION_PATTERN = Pattern.compile("(\\d+)(\\.(\\d+)(\\.(\\d+))?)?((\\" + SNAPSHOT+ "))?");
+    private static final Pattern VERSION_PATTERN = Pattern.compile("(\\d+)(\\.(\\d+)(\\.(\\d+))?)?((\\" + SNAPSHOT + "))?");
 
     private int major;
     private int minor;
     private int patch;
-    
-	private boolean snapshot;
+
+    private boolean snapshot;
 
     public Version(int major, int minor, int patch, boolean snapshot) {
         this.major = major;
@@ -35,19 +35,19 @@ public class Version implements Comparable<Version> {
     }
 
     public Version(int major, int minor, int patch) {
-    	this(major, minor, patch, false);
+        this(major, minor, patch, false);
     }
 
     public Version(int major, int minor) {
-    	this(major, minor, 0, false);
+        this(major, minor, 0, false);
     }
 
     public Version(int major) {
-    	this(major, 0, 0, false);
+        this(major, 0, 0, false);
     }
 
     public Version() {
-    	this(0, 0, 0, false);
+        this(0, 0, 0, false);
     }
 
     /**
@@ -69,7 +69,7 @@ public class Version implements Comparable<Version> {
                 setPatch(Integer.valueOf(matcher.group(5)));
             }
             if (matcher.group(6) != null && matcher.group(6).equals(SNAPSHOT)) {
-            	setSnapshot(true);
+                setSnapshot(true);
             }
         } else {
             throw new IllegalArgumentException("Die Version '" + versionString + "' entspricht nicht dem Schemata x.y.z oder x.y.z-SNAPSHOT!");
@@ -77,15 +77,15 @@ public class Version implements Comparable<Version> {
     }
 
     @Override
-	public String toString() {
-    	if (isSnapshot()) {
-    		return major + "." + minor + "." + patch + SNAPSHOT;
-    	} else {
-    		return major + "." + minor + "." + patch;
-    	}
-	}
+    public String toString() {
+        if (isSnapshot()) {
+            return major + "." + minor + "." + patch + SNAPSHOT;
+        } else {
+            return major + "." + minor + "." + patch;
+        }
+    }
 
-	public final int getMajor() {
+    public final int getMajor() {
         return major;
     }
 
@@ -110,13 +110,13 @@ public class Version implements Comparable<Version> {
     }
 
     public void setSnapshot(boolean snapshot) {
-		this.snapshot = snapshot;
-	}
+        this.snapshot = snapshot;
+    }
 
-	public boolean isSnapshot() {
-		return snapshot;
-	}
-    
+    public boolean isSnapshot() {
+        return snapshot;
+    }
+
     public boolean isGT(Version version) {
         if (this.compareTo(version) > 0) {
             return true;
@@ -125,14 +125,14 @@ public class Version implements Comparable<Version> {
         }
     }
 
-	public boolean isGE(Version version) {
+    public boolean isGE(Version version) {
         if (this.compareTo(version) >= 0) {
             return true;
         } else {
             return false;
         }
-	}
-    
+    }
+
     public boolean isLT(Version version) {
         if (this.compareTo(version) < 0) {
             return true;
@@ -149,39 +149,38 @@ public class Version implements Comparable<Version> {
         }
     }
 
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + major;
+        result = prime * result + minor;
+        result = prime * result + patch;
+        result = prime * result + (snapshot ? 1231 : 1237);
+        return result;
+    }
 
     @Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + major;
-		result = prime * result + minor;
-		result = prime * result + patch;
-		result = prime * result + (snapshot ? 1231 : 1237);
-		return result;
-	}
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Version other = (Version) obj;
+        if (major != other.major)
+            return false;
+        if (minor != other.minor)
+            return false;
+        if (patch != other.patch)
+            return false;
+        if (snapshot != other.snapshot)
+            return false;
+        return true;
+    }
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Version other = (Version) obj;
-		if (major != other.major)
-			return false;
-		if (minor != other.minor)
-			return false;
-		if (patch != other.patch)
-			return false;
-		if (snapshot != other.snapshot)
-			return false;
-		return true;
-	}
-
-	/** {@inheritDoc} */
+    /** {@inheritDoc} */
     public int compareTo(Version o) {
         if (this == o) {
             return 0;
@@ -202,11 +201,11 @@ public class Version implements Comparable<Version> {
                 } else if (getPatch() > o.getPatch()) {
                     return +1;
                 } else {
-                	if (isSnapshot() && !o.isSnapshot()) {
-                		return -1;
-                	} else if (!isSnapshot() && o.isSnapshot()) {
-                		return +1;
-                	}
+                    if (isSnapshot() && !o.isSnapshot()) {
+                        return -1;
+                    } else if (!isSnapshot() && o.isSnapshot()) {
+                        return +1;
+                    }
                 }
             }
         }

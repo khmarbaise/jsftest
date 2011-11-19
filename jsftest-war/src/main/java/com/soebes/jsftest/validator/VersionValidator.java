@@ -8,29 +8,28 @@ import javax.faces.validator.ValidatorException;
 
 import com.soebes.jsftest.domain.Version;
 
-
 public class VersionValidator implements Validator {
 
-    private static final Version SMALLEST_VERSION = new Version(1,0,0,false);
-    
+    private static final Version SMALLEST_VERSION = new Version(1, 0, 0, false);
+
     public void validate(FacesContext context, UIComponent component,
             Object value) throws ValidatorException {
 
         if (value == null) {
             return;
         }
-        
+
         if (!(value instanceof Version)) {
             return;
         }
 
         Version v = (Version) value;
         if (v.isLE(SMALLEST_VERSION)) {
-          FacesMessage message = new FacesMessage();
-          message.setSeverity(FacesMessage.SEVERITY_ERROR);
-          message.setSummary("The given version is less or equals 1.0.0");
-          context.addMessage("userForm:version", message);
-          throw new ValidatorException(message);
+            FacesMessage message = new FacesMessage();
+            message.setSeverity(FacesMessage.SEVERITY_ERROR);
+            message.setSummary("The given version is less or equals 1.0.0");
+            context.addMessage("userForm:version", message);
+            throw new ValidatorException(message);
         }
     }
 
