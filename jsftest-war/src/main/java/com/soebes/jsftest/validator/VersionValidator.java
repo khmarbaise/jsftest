@@ -11,6 +11,8 @@ import com.soebes.jsftest.domain.Version;
 
 public class VersionValidator implements Validator {
 
+    private static final Version SMALLEST_VERSION = new Version(1,0,0,false);
+    
     public void validate(FacesContext context, UIComponent component,
             Object value) throws ValidatorException {
 
@@ -22,18 +24,14 @@ public class VersionValidator implements Validator {
             return;
         }
 
-//        String input = (String) value;
-//        try {
-//            @SuppressWarnings("unused")
-//            Version v = new Version(input);
-//        } catch (IllegalArgumentException e) {
-//            FacesMessage message = new FacesMessage();
-//            message.setSeverity(FacesMessage.SEVERITY_ERROR);
-//            message.setSummary("The given version is not Ok.");
-//            message.setDetail(e.getMessage());
-//            context.addMessage("userForm:version", message);
-//            throw new ValidatorException(message);
-//        }
+        Version v = (Version) value;
+        if (v.isLE(SMALLEST_VERSION)) {
+          FacesMessage message = new FacesMessage();
+          message.setSeverity(FacesMessage.SEVERITY_ERROR);
+          message.setSummary("The given version is less or equals 1.0.0");
+          context.addMessage("userForm:version", message);
+          throw new ValidatorException(message);
+        }
     }
 
 }

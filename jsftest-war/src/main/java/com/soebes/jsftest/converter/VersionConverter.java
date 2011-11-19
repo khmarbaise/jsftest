@@ -12,29 +12,34 @@ public class VersionConverter implements Converter {
 
     public Object getAsObject(FacesContext context, UIComponent component,
             String value) {
+
         if (value.isEmpty()) {
-            return null;
+            FacesMessage message = new FacesMessage();
+            message.setSeverity(FacesMessage.SEVERITY_ERROR);
+            message.setSummary("Es muss eine Version angegeben werden.");
+            context.addMessage("userForm:version", message);
+            throw new ConverterException(message);
         }
 
         Version v = null;
         try {
             v = new Version(value);
         } catch (IllegalArgumentException e) {
-
             FacesMessage msg = new FacesMessage("Version nicht ok.", e.getMessage());
             msg.setSeverity(FacesMessage.SEVERITY_ERROR);
             throw new ConverterException(msg);
         }
+
         return v;
     }
 
     public String getAsString(FacesContext context, UIComponent component,
             Object value) {
 
-        if (value != null) {
-            return value.toString();
-        } else {
+        if (value == null) {
             return null;
+        } else {
+            return value.toString();
         }
     }
 
