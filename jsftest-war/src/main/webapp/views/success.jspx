@@ -33,9 +33,10 @@
 						<f:converter converterId="versionConverter"/>
 					</ice:inputText>
 
-					<h:selectOneMenu id="versionDropDown">
-						<f:selectItems id="versionItems" value="#{versionManager.versionList}"/>
+					<h:selectOneMenu id="versionDropDown" value="#{versionManager.selectedVersion}" converter="versionConverter" >
+						<f:selectItems id="versionItems" value="#{versionManager.versionList}" />
 					</h:selectOneMenu>
+					<h:message for="versionDropDown" style="color:red" />
 
 					<h:commandButton value="DO IT" action="#{versionManager.action}"/>
 					<h:message for="versionInput" style="color:red" />

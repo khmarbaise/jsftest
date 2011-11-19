@@ -22,7 +22,13 @@
 		</head>
 		<body>
 			<f:view>
+				<h:outputText value="Eingegebene Version "/>
 				<h:outputText value="#{versionManager.version}">
+					<f:converter converterId="versionConverter"/>
+				</h:outputText>
+				<br />
+				<h:outputText value="Per Combo-Box ausgewählte Version "/>
+				<h:outputText value="#{versionManager.selectedVersion}">
 					<f:converter converterId="versionConverter"/>
 				</h:outputText>
 	        </f:view>

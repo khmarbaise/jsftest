@@ -15,17 +15,17 @@ public class VersionManager {
     private static Logger LOGGER = Logger.getLogger(VersionManager.class);
 
     private Version version;
+    private Version selectedVersion;
     
     private ArrayList<SelectItem> versionList = new ArrayList<SelectItem>();
 
     public VersionManager() {
         LOGGER.info("VersionManager::VersionManager()");
         
-        versionList.add(new SelectItem(new Version(1,0,0), "1.0.0"));
-        versionList.add(new SelectItem(new Version(1,1,0), "1.1.0"));
-        versionList.add(new SelectItem(new Version(1,2,0), "1.2.0"));
-        versionList.add(new SelectItem(new Version(1,3,0), "1.3.0"));
-        versionList.add(new SelectItem(new Version(1,4,0), "1.4.0"));
+        for (int i=0; i<6;i++) {
+            Version v = new Version(1,i,0);
+            versionList.add(new SelectItem(v, v.toString()));
+        }
     }
 
     public String action() {
@@ -48,5 +48,12 @@ public class VersionManager {
         this.versionList = versionList;
     }
 
+    public Version getSelectedVersion() {
+        return selectedVersion;
+    }
+
+    public void setSelectedVersion(Version selectedVersion) {
+        this.selectedVersion = selectedVersion;
+    }
     
 }
