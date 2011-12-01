@@ -10,8 +10,7 @@ import com.soebes.jsftest.domain.Version;
 
 public class VersionConverter implements Converter {
 
-    public Object getAsObject(FacesContext context, UIComponent component,
-            String value) {
+    public Object getAsObject(FacesContext context, UIComponent component, String value) {
 
         if (value.isEmpty()) {
             FacesMessage message = new FacesMessage();
@@ -33,8 +32,7 @@ public class VersionConverter implements Converter {
         return v;
     }
 
-    public String getAsString(FacesContext context, UIComponent component,
-            Object value) {
+    public String getAsString(FacesContext context, UIComponent component, Object value) {
 
         if (value == null) {
             return null;
