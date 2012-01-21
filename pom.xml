@@ -6,7 +6,7 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>de.konsens.jsftest</groupId>
+  <groupId>com.soebes.jsftest</groupId>
   <artifactId>jsftest</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -57,12 +57,12 @@
     <maven.javadoc.plugin.version>2.8</maven.javadoc.plugin.version>
     <maven.ncss.plugin.version>2.0</maven.ncss.plugin.version>
     <maven.changes.plugin.version>2.6</maven.changes.plugin.version>
-    <maven.surefire.plugin.version>2.9</maven.surefire.plugin.version>
-    <maven.failsafe.plugin.version>2.9</maven.failsafe.plugin.version>
-    <maven.surefire.report.plugin.version>2.9</maven.surefire.report.plugin.version>
+    <maven.surefire.plugin.version>2.11</maven.surefire.plugin.version>
+    <maven.failsafe.plugin.version>2.11</maven.failsafe.plugin.version>
+    <maven.surefire.report.plugin.version>2.11</maven.surefire.report.plugin.version>
     <maven.jar.plugin.version>2.3.1</maven.jar.plugin.version>
     <maven.war.plugin.version>2.1.1</maven.war.plugin.version>
-    <maven.ear.plugin.version>2.6</maven.ear.plugin.version>
+    <maven.ear.plugin.version>2.7</maven.ear.plugin.version>
     <maven.ejb.plugin.version>2.3</maven.ejb.plugin.version>
     <taglist.maven.plugin.version>2.4</taglist.maven.plugin.version>
   </properties>
