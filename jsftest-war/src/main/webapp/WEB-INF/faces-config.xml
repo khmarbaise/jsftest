@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE faces-config PUBLIC
-    "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN"
-    "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
-
-<faces-config>
-	
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+    version="2.0">
 	<converter>
 		<description>versionConvert</description>
 		<display-name>versionConverter</display-name>
@@ -30,35 +30,35 @@
 
 	<navigation-rule>
 		<display-name>views/login</display-name>
-		<from-view-id>/views/login.jspx</from-view-id>
+		<from-view-id>/views/login.xthml</from-view-id>
 		<navigation-case>
 			<from-outcome>success</from-outcome>
-			<to-view-id>/views/success.jspx</to-view-id>
+			<to-view-id>/views/success.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<display-name>views/login</display-name>
-		<from-view-id>/views/login.jspx</from-view-id>
+		<from-view-id>/views/login.xthml</from-view-id>
 		<navigation-case>
 			<from-outcome>error</from-outcome>
-			<to-view-id>/views/error.jspx</to-view-id>
+			<to-view-id>/views/error.xthml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<display-name>views/success</display-name>
-		<from-view-id>/views/success.jspx</from-view-id>
+		<from-view-id>/views/success.xthml</from-view-id>
 		<navigation-case>
 			<from-outcome>success</from-outcome>
-			<to-view-id>/views/version.jspx</to-view-id>
+			<to-view-id>/views/version.xthml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	
 	<navigation-rule>
 		<display-name>views/success</display-name>
-		<from-view-id>/views/success.jspx</from-view-id>
+		<from-view-id>/views/success.xthml</from-view-id>
 		<navigation-case>
 			<from-outcome>error</from-outcome>
-			<to-view-id>/views/success.jspx</to-view-id>
+			<to-view-id>/views/success.xthml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+ 
+ <h:head>
+	<title>Test Überschrift</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+</h:head>
+<h:body>
+
+	<h:form>
+		<table width="100%">
+			<tr>
+				<td width="25%" align="right">Username:</td>
+				<td align="left"><h:inputText value="#{loginManager.username}" /></td>
+				<td width="25%"></td>
+			</tr>
+			<tr>
+				<td width="25%" align="right">Passwort:</td>
+				<td align="left"><h:inputSecret
+						value="#{loginManager.password}" /></td>
+				<td width="25%"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td align="left"><h:commandButton value="Login"
+						action="#{loginManager.loginAction}" /></td>
+				<td></td>
+			</tr>
+		</table>
+	</h:form>
+
+</h:body>
+</html>

@@ -4,20 +4,10 @@
 	xmlns:t="http://myfaces.apache.org/tomahawk"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 
-	<h:outputDeclaration doctypeRoot="HTML"
-		doctypePublic="-//W3C//DTD HTML 4.01 Transitional//EN"
-		doctypeSystem="http://www.w3.org/TR/html4/loose.dtd" />
-
 	<html>
 	    <head>
 			<title>Version JSPX</title>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
-			<h:outputStyle href="../css/common.css" />
-			<h:outputStyle href="../css/fieldsets.css" />
-			<h:outputStyle href="../css/tabs.css" />
-			<h:outputStyle href="../css/menubar.css" />
-			<h:outputStyle href="../css/pnlpopup.css" />
-			<h:outputStyle href="../css/connstatus.css" />
 		</head>
 		<body>
 			<f:view>
