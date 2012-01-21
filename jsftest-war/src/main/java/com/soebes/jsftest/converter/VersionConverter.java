@@ -12,7 +12,7 @@ public class VersionConverter implements Converter {
 
     public Object getAsObject(FacesContext context, UIComponent component, String value) {
 
-        if (value.isEmpty()) {
+        if (value == null || value.isEmpty()) {
             FacesMessage message = new FacesMessage();
             message.setSeverity(FacesMessage.SEVERITY_ERROR);
             message.setSummary("Es muss eine Version angegeben werden.");
