@@ -1,6 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://java.sun.com/jsf/core"      
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
  
     <h:head>
 			<title>Login done..</title>
@@ -27,6 +28,9 @@
 
 				<h:commandButton value="DO IT" action="#{versionManager.action}"/>
 				<h:message for="versionInput" style="color:red" />
+				
+				<p:editor />
+				
 			</h:form>
 			
         </f:view>
