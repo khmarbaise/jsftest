@@ -10,13 +10,14 @@
   <description>jsftest</description>
 
   <welcome-file-list>
-    <welcome-file>login.xhtml</welcome-file>
+    <welcome-file>index.xhtml</welcome-file>
   </welcome-file-list>
 
   <session-config>
     <session-timeout>60</session-timeout>
   </session-config>
 
+  <!--  Valid values: javax.faces.application.ProjectStage: -->
   <context-param>
     <param-name>javax.faces.PROJECT_STAGE</param-name>
     <param-value>Development</param-value>

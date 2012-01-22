@@ -39,7 +39,7 @@ public class VersionManager implements Serializable {
     }
 
     public String action() {
-        return "success";
+        return "version";
     }
 
     public Version getVersion() {

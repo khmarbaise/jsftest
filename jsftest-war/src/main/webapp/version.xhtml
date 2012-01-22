@@ -1,28 +1,26 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<f:view xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:t="http://myfaces.apache.org/tomahawk"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
 
-	<html>
-	    <head>
+ <h:head>
 			<title>Version JSPX</title>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
-		</head>
-		<body>
-			<f:view>
-				<h:outputText value="Eingegebene Version "/>
-				<h:outputText value="#{versionManager.version}">
-					<f:converter converterId="versionConverter"/>
-				</h:outputText>
-				<br />
-				<h:outputText value="Per Combo-Box ausgewählte Version "/>
-				<h:outputText value="#{versionManager.selectedVersion}">
-					<f:converter converterId="versionConverter"/>
-				</h:outputText>
-	        </f:view>
+</h:head>
+<h:body>
 
-		</body>
-		
-	</html>
-</f:view>
+	<f:view>
+		<h:outputText value="Eingegebene Version " />
+		<h:outputText value="#{versionManager.version}">
+			<f:converter converterId="versionConverter" />
+		</h:outputText>
+		<br />
+		<h:outputText value="Per Combo-Box ausgewählte Version " />
+		<h:outputText value="#{versionManager.selectedVersion}">
+			<f:converter converterId="versionConverter" />
+		</h:outputText>
+	</f:view>
+
+</h:body>
+</html>
