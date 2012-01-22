@@ -1,12 +1,24 @@
 package com.soebes.jsftest;
 
+import java.io.Serializable;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
 import org.apache.log4j.Logger;
 
 /**
  * @author Karl Heinz Marbaise
  */
-public class LoginManager {
-    private static Logger LOGGER = Logger.getLogger(LoginManager.class);
+@ManagedBean(name = "loginManager")
+@SessionScoped
+public class LoginManager implements Serializable {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -2087890675021805041L;
+
+	private static Logger LOGGER = Logger.getLogger(LoginManager.class);
 
     private String username;
     private String password;

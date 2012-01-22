@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+ 
+    <h:head>
+			<title>Login done..</title>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    </h:head>
+    <h:body>
+    	<h3>JSF 2.0 Hello World Example - hello.xhtml</h3>
+		<f:view>
+			<h:outputText value="Der Benutzer "/>
+			<i><h:outputText value="#{loginManager.username}"/></i> wurde erfolgreich angemeldet.
+			<br/>
+
+			<h:form id="versionInputForm">
+
+				<h:inputText id="versionInput" value="#{versionManager.version}" required="true">
+					<f:validator validatorId="versionValidator"/>
+					<f:converter converterId="versionConverter"/>
+				</h:inputText>
+
+				<h:selectOneMenu id="versionDropDown" value="#{versionManager.selectedVersion}" converter="versionConverter" >
+					<f:selectItems id="versionItems" value="#{versionManager.versionList}" />
+				</h:selectOneMenu>
+				<h:message for="versionDropDown" style="color:red" />
+
+				<h:commandButton value="DO IT" action="#{versionManager.action}"/>
+				<h:message for="versionInput" style="color:red" />
+			</h:form>
+			
+        </f:view>
+
+
+    </h:body>
+</html>

@@ -5,9 +5,11 @@ import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.ConverterException;
+import javax.faces.convert.FacesConverter;
 
 import com.soebes.jsftest.domain.Version;
 
+@FacesConverter("versionConverter")
 public class VersionConverter implements Converter {
 
     public Object getAsObject(FacesContext context, UIComponent component, String value) {

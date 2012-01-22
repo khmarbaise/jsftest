@@ -10,7 +10,7 @@
   <description>jsftest</description>
 
   <welcome-file-list>
-    <welcome-file>index.xhtml</welcome-file>
+    <welcome-file>login.xhtml</welcome-file>
   </welcome-file-list>
 
   <session-config>

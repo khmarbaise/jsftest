@@ -5,60 +5,27 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
     http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
     version="2.0">
-	<converter>
-		<description>versionConvert</description>
-		<display-name>versionConverter</display-name>
-		<converter-id>versionConverter</converter-id>
-		<converter-class>com.soebes.jsftest.converter.VersionConverter</converter-class>
-	</converter>
-	<validator>
-		<description>versionValidator</description>
-		<display-name>versionValidator</display-name>
-		<validator-id>versionValidator</validator-id>
-		<validator-class>com.soebes.jsftest.validator.VersionValidator</validator-class>
-	</validator>
-	<managed-bean>
-		<managed-bean-name>loginManager</managed-bean-name>
-		<managed-bean-class>com.soebes.jsftest.LoginManager</managed-bean-class>
-		<managed-bean-scope>session</managed-bean-scope>
-	</managed-bean>
-	<managed-bean>
-		<managed-bean-name>versionManager</managed-bean-name>
-		<managed-bean-class>com.soebes.jsftest.VersionManager</managed-bean-class>
-		<managed-bean-scope>session</managed-bean-scope>
-	</managed-bean>
 
 	<navigation-rule>
-		<display-name>views/login</display-name>
-		<from-view-id>/views/login.xthml</from-view-id>
+		<from-view-id>/login.xthml</from-view-id>
 		<navigation-case>
 			<from-outcome>success</from-outcome>
-			<to-view-id>/views/success.xhtml</to-view-id>
+			<to-view-id>/success.xhtml</to-view-id>
 		</navigation-case>
-	</navigation-rule>
-	<navigation-rule>
-		<display-name>views/login</display-name>
-		<from-view-id>/views/login.xthml</from-view-id>
 		<navigation-case>
 			<from-outcome>error</from-outcome>
-			<to-view-id>/views/error.xthml</to-view-id>
+			<to-view-id>/error.xthml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
-		<display-name>views/success</display-name>
-		<from-view-id>/views/success.xthml</from-view-id>
+		<from-view-id>/success.xthml</from-view-id>
 		<navigation-case>
 			<from-outcome>success</from-outcome>
-			<to-view-id>/views/version.xthml</to-view-id>
+			<to-view-id>/version.xthml</to-view-id>
 		</navigation-case>
-	</navigation-rule>
-	
-	<navigation-rule>
-		<display-name>views/success</display-name>
-		<from-view-id>/views/success.xthml</from-view-id>
 		<navigation-case>
 			<from-outcome>error</from-outcome>
-			<to-view-id>/views/success.xthml</to-view-id>
+			<to-view-id>/success.xthml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 
